@@ -1,0 +1,24 @@
+
+    //ширина сторінки і блоків
+$page-max-width: 1600px;
+$content-max-width: 1200px;
+  
+    // кольри
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$primari-white-color: #ffffff;
+$footer-bg-color: #2f303a;
+$footer-grey-color: rgba(255, 255, 255, 0.6);
+$button-focus-color:#188CE8;
+$secondary-bg-color: #f5f4fa;
+$link-color: #afb1b8;
+
+  // шрифти і їхні властивості
+$primary-fonts: 'Roboto', sans-serif;
+$secondary-fonts: 'Raleway', sans-serif;
+
+ //анімації
+
+$cubic-bezier: 0.4, 0, 0.2, 1;
+$primari-trasition-duration: 250ms;

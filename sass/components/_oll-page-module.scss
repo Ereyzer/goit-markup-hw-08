@@ -1,0 +1,32 @@
+body {
+    font-family: $primary-fonts;
+    line-height: 1.17;
+    color: $primary-text-color;
+    letter-spacing: 0.03em;
+
+
+    background-color: $primari-white-color;
+}
+/* основні розміри сторінки*/
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: $content-max-width;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+ 
+ /*кнопки мають спільні значення */
+
+button {
+    font-family: inherit;
+    border-radius: 4px;
+    border: transparent;
+}
+
+/*спільне в заголовках*/
+

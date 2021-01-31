@@ -1,0 +1,324 @@
+
+
+
+
+
+/* main*/
+
+/* СТУДІЯ */
+/* наш герой */
+
+
+.hero {
+
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
+    max-width: $page-max-width;
+    
+    background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #C4C4C4;;
+
+    
+    &__title {
+        width: 600px;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 30px;
+        margin-left: auto;
+    
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    
+        text-align: center;
+    
+        color: $primari-white-color;
+
+    }
+
+    &__button {
+        @extend %primary-button;
+        display: block;
+        padding: 10px 20px;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+        
+        &:hover,
+        &:focus {
+    
+            background-color: #188ce8, 100%;
+        }
+
+    }
+}
+    
+    
+/* секція наші плюси */
+    
+.speciality {
+    margin: 0;
+    padding: 94px 0;
+    
+    
+    &__list {
+        display: flex;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+    
+    }
+
+    &__title {
+        @extend %primary-title;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    &__paragraph {
+        line-height: 1.71;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0;
+        
+    }
+    
+    &__item {
+        display: block;
+        width: 270px;
+    
+        &::before {
+            content: "";
+            display: block;
+            
+            height: 120px;
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #F5F4FA;
+        }
+    
+    
+    }  
+
+    &__item + &__item {
+        margin-left: 30px;
+    }
+}
+
+   
+.icon-antenna::before {
+    background-image: url(../img/svg/antenna.svg);
+}
+    
+.icon-clock::before {
+    background-image: url(../img/svg/clock.svg);
+}
+    
+.icon-diagram::before {
+    background-image: url(../img/svg/diagram.svg);
+}
+    
+.icon-astronaft::before {
+    background-image: url(../img/svg/astronaut.svg);
+}
+    
+    
+    
+    
+    
+    
+    
+    /*чим ми займаємось*/
+.engage {
+    padding: 0 0 94px 0;
+
+    &__title {
+        @extend %primary-title;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-left: auto;
+        text-align: center;
+        
+        
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        
+        margin: 0 auto 0 auto;
+        
+        
+    }
+
+    &__item {
+
+        position: relative;
+    }
+
+    &__description{
+        position: absolute;
+        
+        display: block;
+        width: 100%;
+        
+        background: rgba(47, 48, 58, 0.8);
+        bottom: 0;
+        
+        padding-top: 27px;
+        padding-bottom: 27px;
+        text-align: center;
+        
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;
+    }
+}    
+    
+    
+    /* наша команда */
+    
+.team {
+    margin: 0;
+    padding: 94px 0;
+    background-color: $secondary-bg-color;
+    
+    &__title {
+
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-left: auto;
+        text-align: center;
+        
+        
+    }
+
+    &__list {
+    
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+}
+    
+    
+    
+    
+.team-card {
+    width: 270px;
+    text-align: center;
+    border-radius: 4px;
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px 
+    rgba(0, 0, 0, 0.14), 0px 2px 1px 
+    rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    
+    background-color: $primari-white-color;
+
+    &__block {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        
+        font-size: 16px;
+        line-height: 1.19;
+        
+        font-weight: 400;
+    }
+
+    &__name{
+        margin-bottom: 10px;
+        font-weight: 500;
+        
+        color: $title-text-color;
+    }
+}
+    
+    
+//клоєнти  
+    
+.customer {
+    padding: 94px 0;
+   
+    &__title {
+        @extend %primary-title;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-left: auto;
+        text-align: center;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 90px;
+        border: 1px solid $link-color;
+        border-radius: 4px;
+    
+    
+        color: $link-color;
+    
+        transition: color $primari-trasition-duration cubic-bezier($cubic-bezier),
+        border-color $primari-trasition-duration cubic-bezier($cubic-bezier);
+    
+    
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            border-color: $accent-color;
+        }
+
+    }
+    
+    &__icon {
+    
+    
+        fill: currentColor;
+    }
+}
+    
+.team__social {
+    justify-content: center;
+
+    .social__link {
+        color: $link-color;
+    }
+    
+}

@@ -1,0 +1,148 @@
+
+ /*усе про футер*/
+ 
+.footer-container {
+   display: flex;
+   align-items: center;
+}
+ 
+
+footer {
+   margin: 0;
+   padding-top: 60px;
+   padding-bottom: 60px;
+       
+   background-color: $footer-bg-color;
+}
+
+.address-list {
+   padding: 0;
+   margin-top: 20px;
+   margin-bottom: 0;
+
+   &__item + &__item {
+      margin-top: 9px; 
+   }
+
+   &__link  {
+      
+      transition: color $primari-trasition-duration cubic-bezier($cubic-bezier);
+      &:hover,
+      &:focus {
+         color: $accent-color;
+      }
+   }
+
+   &__link--footer-contact {
+      color: $footer-grey-color;
+   }
+
+   &__link--address {
+      display: inline-block;
+    
+      font-size: 14px;
+      line-height: 1.71;
+      color: $primari-white-color;
+   }
+}
+
+
+.footer-social{
+
+   margin-left: 70px;
+
+   &__link {
+    
+      color: $primari-white-color;
+      background: rgba(255, 255, 255, 0.1);
+   }
+
+   
+}
+       
+
+.footer__title {
+   color: $primari-white-color;
+   font-size: 14px;
+   margin-top: 0;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+         
+}
+
+
+
+
+    
+   
+.footer-form {
+   display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: 0;
+
+   &__input {
+
+      margin: 0;
+      width: 358px;
+      height: 50px;
+      background-color: $footer-bg-color;
+      color: $footer-grey-color;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-sizing: border-box;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+      padding-left: 16px;
+
+      &::placeholder {
+         color: $footer-grey-color;
+      }
+   }
+   
+
+   &__button {
+      @extend %primary-button;
+      
+      position: relative;
+
+      margin-left: 12px;
+    
+      padding-top: 12px;
+      padding-right: 28px;
+      padding-bottom: 8px;
+      padding-left: 29px;
+
+      font-size: 16px;
+      line-height: 1.87;
+      letter-spacing: 0.06em;
+      text-transform: capitalize;
+      text-align: start;
+
+
+      
+
+      &::after{
+         display: block;
+         position: absolute;
+         content: '';
+         background-image: url(../img/svg/send.svg);
+         
+         width: 24px;
+         height: 24px;
+         right: 28px;
+         top: 13px;
+      }
+
+      &:focus,
+      &:hover {
+         background-color:$button-focus-color;
+      }
+
+   }
+
+}
+    
+   
+    
+    
+  

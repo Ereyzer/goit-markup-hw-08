@@ -1,0 +1,212 @@
+
+
+/* сторінка портфоліо */
+
+.content-container {
+    text-align: center;
+    
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
+}
+    
+.filter-list {
+    display: inline-flex;
+    
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    padding: 0;
+    
+
+    &__item + &__item {
+        margin-left: 8px;
+    }
+
+    &__button {
+        display: inline-block;
+        
+        padding: 6px 22px;
+        line-height: 1.63;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: inherit;
+        
+        background-color: $secondary-bg-color;
+        
+        transition: color $primari-trasition-duration cubic-bezier($cubic-bezier),
+        background-color $primari-trasition-duration cubic-bezier($cubic-bezier);
+    
+
+
+        
+    
+        &:focus ,
+        &:hover {
+            background-color: $accent-color;
+            color: $primari-white-color;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px 
+            rgba(0, 0, 0, 0.08), 0px 2px 2px 
+            rgba(0, 0, 0, 0.12);
+        }
+        
+    
+        &:active {
+            line-height: 1.63;
+        
+            background-color: $accent-color;
+            color: $primari-white-color;
+        
+        }
+    }
+
+
+
+}
+    
+    
+    
+    
+    
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+    
+        margin-top: 30px;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 30px;
+        width: 370px;
+        text-align: left;
+        background-color: $primari-white-color;
+
+        &:nth-child(3n+1) {
+            margin-left: 0;
+        }
+            
+        &:nth-child(-n+3) {
+            margin-top: 0;
+        }
+    }
+
+    &__link {
+            display: block;
+            
+        &:hover,
+        &:focus {
+    
+    
+            box-shadow: 0px 1px 1px 
+            rgba(0, 0, 0, 0.12), 0px 4px 4px 
+            rgba(0, 0, 0, 0.06), 1px 4px 6px 
+            rgba(0, 0, 0, 0.16);
+        }
+        
+            
+    }
+
+    &__text {
+        border: 1px solid #EEEEEE;
+        padding: 20px 24px;
+    }
+
+    &__title {
+        @extend %primary-title;
+        line-height: 2;
+        font-size: 18px;
+        text-transform: none;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 4px;
+        margin-left: 0;
+        letter-spacing: 0.06em;
+    }
+        
+    &__paragraph {
+        line-height: 1.88;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0;
+        
+        
+        color: $primary-text-color;
+    }
+            
+}
+    
+    
+    
+    /*.portfolio-card::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: ;
+    background: rgba(33, 150, 243, 0.9);
+    }*/
+    
+    
+    
+    
+    
+
+    
+.portfolio-overlay {
+    display: block;
+    width: 100%;
+    height: 294px;
+    overflow: hidden;
+    
+    position: relative;
+
+
+
+    &__paragraph {
+        display: block;
+        
+        background: rgba(33, 150, 243, 0.9);
+        
+        position: absolute; 
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        
+        padding: 63px 24px;
+        
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.56;
+        
+        
+        color: #FFFFFF;
+        
+        
+        
+        
+        transition: transform $primari-trasition-duration cubic-bezier($cubic-bezier);
+        
+        .cards-list__link:hover &,
+        .cards-list__link:focus & {
+    
+            transform: translateY(-100%);
+        }
+    }
+    
+}
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
