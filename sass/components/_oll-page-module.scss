@@ -11,12 +11,30 @@ body {
 
 
 .container {
+    
     margin-left: auto;
     margin-right: auto;
 
-    width: $content-max-width;
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+
+    @media screen and (max-width: $content-max-width - 1) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $width-mobile) {
+        width: $width-mobile;
+    }
+    
+    @media screen and (min-width:$width-tablet) {
+        width: $width-tablet;
+    }
+
+    @media screen and (min-width: $content-max-width) {
+        width: $content-max-width;
+        
+    }
 }
 
  

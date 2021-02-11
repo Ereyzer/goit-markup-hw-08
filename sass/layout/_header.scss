@@ -4,48 +4,53 @@ header {
     border-bottom: 1px solid #ECECEC;
 }
 
-.head {
+
+
+.nav{
     display: flex;
-    
     justify-content: space-between;
-    
-    font-weight: 500;
-    font-size: 14px;
-    
-    letter-spacing: 0.02em;
-}
-    
-.nav {
-    display: flex;
     align-items: center;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: $width-tablet){
+        padding: 0;
+    }
+
+    
 
     &__list {
         display: flex;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 93px;
-        
-    }
-
-    &__item {
-        margin-right: 50px; 
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 
     &__link {
         position: relative;
         display: block;
-        padding-top: 32px;
-        padding-bottom: 32px;
+        padding: 32px 0;
 
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
 
         color: $title-text-color;
-        
+
         transition: color $primari-trasition-duration cubic-bezier($cubic-bezier);
-        
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity $primari-trasition-duration cubic-bezier($cubic-bezier);
+            
+        }
 
         &:hover,
         &:focus {
@@ -58,56 +63,51 @@ header {
         }
     }
 
-    &__link--current {
-        
-        
-        color: $accent-color;
-
-            
-        
-        
-        
+    &__item + &__item {
+        margin-left: 50px;
     }
-
-    &__link::after {
-        position: absolute;
-        display: block;
-        content: "";
-        width: 100%;
-        height: 4px;
-        background-color: $accent-color;
-        border-radius: 2px;
-        bottom: 0;
-        opacity: 0;
-        transition: opacity $primari-trasition-duration cubic-bezier($cubic-bezier);
-        
-    }
-
 }
 
-.nav__link--current.nav__link::after {
-    opacity: 1;
+
+.nav__link--current{
+    color: $accent-color;
+
+    &.nav__link::after {
+        opacity: 1;
+
+    }
 }
 
+.page-header {
+    display: none;
     
+    @media screen and (min-width: $width-tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
 
 .address-header {
-
     display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-left: 84px;
 
     &__link {
-        transition: color $primari-trasition-duration cubic-bezier($cubic-bezier);
-        
         display: flex;
         align-items: center;
 
-        padding-top: 32px;
-        padding-bottom: 32px;
-        
+        font-weight: 500;
+        font-size: 12px;
+
+        letter-spacing: 0.02em;
 
         color: $primary-text-color;
-    
-    
+
+        transition: color $primari-trasition-duration cubic-bezier($cubic-bezier);
+
         &:hover,
         &:focus {
             color: $accent-color;
@@ -115,22 +115,62 @@ header {
         }
     }
 
-    &__link + &__link {
-        margin-left: 50px;
+    @media (max-width: $content-max-width) {
+        &__link + &__link {
+            margin-top: 10px;
+            
+        }
     }
 
+    
+
     &__icon {
-        margin-right: 10px;
+        margin-right: 8px;
         
         
         fill: currentColor;
 
+    }
+}
+
+@media screen and (min-width: $content-max-width) {
+    .nav {
+        justify-content: flex-start;
         
+        &__item:first-child {
+            margin-left: 93px;
+        }
     }
 
-    
+    .page-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .address-header {
+        flex-direction: row;
+        
+        margin-left: 0;
+
+        &__link {
+            font-size: 14px;
+            line-height: 1.14;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+        &__link + &__link {
+            
+            margin-left: 50px;
+
+        }
+    }
 }
+
+
+
     
+
 
 
 

@@ -18,7 +18,11 @@
 //h2,h3
 %primary-title {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     color: $title-text-color;
+
+    @media screen and (min-width:$content-max-width) {
+        font-size: 36px;
+    }
 }
 
